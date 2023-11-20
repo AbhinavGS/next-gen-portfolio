@@ -1,0 +1,30 @@
+@import "./variables";
+
+.header {
+  margin-left: 10%;
+  margin-top: 10%;
+  // border: 1px solid red;
+  width: 60%;
+
+  .avatar {
+    height: 8rem;
+    width: 8rem;
+    background-color: gray;
+    border-radius: 50%;
+    margin-bottom: 3.5rem;
+  }
+
+  .headerTextBox {
+    .headingPrimary {
+      font-size: 6.4rem;
+      margin-bottom: 1rem;
+    }
+    .headingSecondary {
+      font-size: 3.2rem;
+      margin-bottom: 2rem;
+    }
+    .headingTertiary {
+      font-size: 1.6rem;
+    }
+  }
+}
