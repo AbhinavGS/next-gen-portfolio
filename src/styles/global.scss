@@ -1,0 +1,17 @@
+// global.scss is special file (not module). These styles apply to every route in the application
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; // exclude borders and paddings from height and width
+}
+
+html {
+  font-size: 62.5%; // defines what 1 rem is
+}
+
+body {
+  box-sizing: border-box; // include borders and paddings in height and width
+}
