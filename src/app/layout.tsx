@@ -1,5 +1,5 @@
 import "../styles/global.scss";
-import { inter } from "@/app/ui/fonts";
+import { inter, geistSans } from "@/app/ui/fonts";
 
 export default function RootLayout({
   children,
@@ -8,7 +8,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased`}>{children}</body>
+      <body className={`${geistSans.className} antialiased`}>{children}</body>
     </html>
   );
 }
