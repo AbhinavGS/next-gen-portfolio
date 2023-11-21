@@ -1,11 +1,9 @@
 import styles from "@/styles/home.module.scss";
 import { FaLinkedin, FaGithub, FaTwitter, FaInstagram } from "react-icons/fa";
-import Header from "./ui/header";
 
 export default function Home() {
   return (
     <>
-      <Header />
       <header className={styles.header}>
         <div className={styles.avatar}></div>
         <div className={styles.headerTextBox}>
