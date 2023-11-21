@@ -1,0 +1,19 @@
+@import "./variables";
+
+.comingSoon {
+  justify-content: center;
+  text-align: center;
+  margin-left: 50%;
+  margin-top: 20%;
+  transform: translate(-50%);
+  display: inline-block;
+
+  h1 {
+    color: $grey-color;
+  }
+
+  p {
+    margin-top: 1rem;
+    color: $grey-color;
+  }
+}

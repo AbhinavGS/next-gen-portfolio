@@ -2,7 +2,7 @@ import styles from "../../styles/projects.module.scss";
 import ProjectCard from "../ui/projectCard";
 import projects from "@/app/ui/placeholder-data";
 
-export default function Home() {
+export default function Page() {
   return (
     <>
       <section className={styles.textSection}>
