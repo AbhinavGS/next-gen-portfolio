@@ -51,6 +51,25 @@
       font-weight: 400;
     }
   }
+
+  .socialMedia {
+    margin-top: 2rem;
+    a {
+      > * {
+        height: 25px;
+        width: 25px;
+      }
+
+      display: inline-block;
+      margin-right: 20px;
+      color: $grey-color;
+
+      :hover {
+        cursor: pointer;
+        color: $white-color;
+      }
+    }
+  }
 }
 
 @keyframes cursor {

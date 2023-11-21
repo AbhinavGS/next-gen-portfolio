@@ -1,4 +1,5 @@
 import styles from "@/styles/home.module.scss";
+import { FaLinkedin, FaGithub, FaTwitter, FaInstagram } from "react-icons/fa";
 
 export default function Home() {
   return (
@@ -14,6 +15,20 @@ export default function Home() {
           create modern websites, web apps and mobile apps that are fast,
           responsive & easy to use.
         </p>
+      </div>
+      <div className={styles.socialMedia}>
+        <a href="https://linkedin.com">
+          <FaLinkedin />
+        </a>
+        <a href="https://github.com/">
+          <FaGithub />
+        </a>
+        <a href="https://twitter.com/">
+          <FaTwitter />
+        </a>
+        <a href="https://instagram.com/">
+          <FaInstagram />
+        </a>
       </div>
     </header>
   );
