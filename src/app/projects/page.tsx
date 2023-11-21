@@ -7,14 +7,13 @@ export default function Page() {
     <>
       <section className={styles.textSection}>
         <h1 className={styles.title}>
-          Things I&apos;ve made trying to put my dent in the universe.
+          Lorem ipsum dolor, sit amet elit. Omnis, enim!
         </h1>
         <p className={styles.subTitle}>
-          I&apos;ve worked on tons of little projects over the years but these
-          are the ones that I&apos;m most proud of. Many of them are
-          open-source, so if you see something that piques your interest, check
-          out the code and contribute if you have ideas for how it can be
-          improved.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
+          blanditiis ad pariatur autem quidem praesentium dignissimos nobis,
+          reiciendis harum odio temporibus culpa dicta nemo suscipit quisquam,
+          sed cum libero. Accusantium!
         </p>
       </section>
       <section className={styles.cardsSection}>
