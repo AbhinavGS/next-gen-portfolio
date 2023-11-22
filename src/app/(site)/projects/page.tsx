@@ -1,6 +1,9 @@
+import ProjectCard from "@/app/ui/projectCard";
+import { getProjects } from "../../../../sanity/sanity-utils";
 import styles from "../../../styles/projects.module.scss";
 
-export default function Page() {
+export default async function Page() {
+  const projects = await getProjects();
   return (
     <>
       <section className={styles.textSection}>
@@ -16,13 +19,16 @@ export default function Page() {
       </section>
       <section className={styles.cardsSection}>
         <div className={styles.gridContainer}>
+          {projects.map((project: any) => (
+            <ProjectCard key={project._id} data={project} />
+          ))}
+          {/* <div className={styles.card}></div>
           <div className={styles.card}></div>
           <div className={styles.card}></div>
           <div className={styles.card}></div>
           <div className={styles.card}></div>
           <div className={styles.card}></div>
-          <div className={styles.card}></div>
-          <div className={styles.card}></div>
+          <div className={styles.card}></div> */}
         </div>
       </section>
     </>
