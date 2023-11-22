@@ -1,4 +1,4 @@
-import styles from "../../styles/about.module.scss";
+import styles from "../../../styles/about.module.scss";
 import { FaLinkedin, FaGithub, FaTwitter, FaInstagram } from "react-icons/fa";
 import Image from "next/image";
 

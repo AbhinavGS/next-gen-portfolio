@@ -1,6 +1,6 @@
-import "../styles/global.scss";
+import "../../styles/global.scss";
 import { inter, geistSans } from "@/app/ui/fonts";
-import Header from "./ui/header";
+import Header from "../ui/header";
 
 export default function RootLayout({
   children,

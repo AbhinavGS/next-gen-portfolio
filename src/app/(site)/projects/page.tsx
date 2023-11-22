@@ -1,4 +1,4 @@
-import styles from "../../styles/skills.module.scss";
+import styles from "../../../styles/projects.module.scss";
 
 export default function Page() {
   return (
@@ -13,6 +13,17 @@ export default function Page() {
           reiciendis harum odio temporibus culpa dicta nemo suscipit quisquam,
           sed cum libero. Accusantium!
         </p>
+      </section>
+      <section className={styles.cardsSection}>
+        <div className={styles.gridContainer}>
+          <div className={styles.card}></div>
+          <div className={styles.card}></div>
+          <div className={styles.card}></div>
+          <div className={styles.card}></div>
+          <div className={styles.card}></div>
+          <div className={styles.card}></div>
+          <div className={styles.card}></div>
+        </div>
       </section>
     </>
   );
