@@ -1,26 +1,24 @@
 const skill = {
-  name: "skill",
   title: "Skills",
+  name: "skill",
   type: "document",
   fields: [
     {
-      name: "name",
       title: "Name",
+      name: "name",
       type: "string",
     },
-
     {
-      name: "image",
+      title: "Is Professional?",
+      name: "isProfessional",
+      type: "boolean",
+      description: "Mark true if skill is used in work experience",
+    },
+    {
       title: "Image",
+      name: "image",
       type: "image",
       options: { hotspot: true },
-      fields: [
-        {
-          name: "alt",
-          title: "Alt",
-          type: "string",
-        },
-      ],
     },
   ],
 };
