@@ -34,12 +34,11 @@
     overflow: hidden;
     display: inline-flex;
     align-items: center;
+    background-color: rgba($color: $border-color, $alpha: 0.4);
 
     .cardImage {
       width: 50px;
       height: 50px;
-      // border: 1px solid yellow;
-      // object-fit: contain;
       margin-right: 20px;
       border-radius: 50%;
     }
