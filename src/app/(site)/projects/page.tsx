@@ -8,13 +8,15 @@ export default async function Page() {
     <>
       <section className={styles.textSection}>
         <h1 className={styles.title}>
-          Lorem ipsum dolor, sit amet elit. Omnis, enim!
+          Exploring My Universe: Showcase of Creative Endeavors
         </h1>
         <p className={styles.subTitle}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
-          blanditiis ad pariatur autem quidem praesentium dignissimos nobis,
-          reiciendis harum odio temporibus culpa dicta nemo suscipit quisquam,
-          sed cum libero. Accusantium!
+          Embark on a captivating exploration through a curated collection of my
+          proudest projects, meticulously crafted to reflect my unwavering
+          dedication and unparalleled expertise in the dynamic realm of software
+          development. Your journey into the boundless landscape of digital
+          innovation begins here, where each project tells a compelling story of
+          creativity, precision, and technological mastery.
         </p>
       </section>
       <section className={styles.cardsSection}>

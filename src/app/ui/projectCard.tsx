@@ -14,10 +14,7 @@ export default function ProjectCard({ data }) {
       ></Image>
       <div className={styles.cardInfo}>
         <p className={styles.title}>{data.title}</p>
-        <p className={styles.description}>
-          A Next.js app and a Serverless Function API.
-        </p>
-        {/* <p className={styles.description}>{data.description}</p> */}
+        <p className={styles.description}>{data.description}</p>
         {/* <div>{data.repositoryLink}</div>
       <div>{data.link}</div> */}
       </div>
