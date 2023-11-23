@@ -24,13 +24,6 @@ export default async function Page() {
           {projects.map((project: any) => (
             <ProjectCard key={project._id} data={project} />
           ))}
-          {/* <div className={styles.card}></div>
-          <div className={styles.card}></div>
-          <div className={styles.card}></div>
-          <div className={styles.card}></div>
-          <div className={styles.card}></div>
-          <div className={styles.card}></div>
-          <div className={styles.card}></div> */}
         </div>
       </section>
     </>
