@@ -1,21 +1,21 @@
+import { getHomepageContent, getProjects } from "../../../sanity/sanity-utils";
 import styles from "../../styles/home.module.scss";
 
 import { FaLinkedin, FaGithub, FaTwitter, FaInstagram } from "react-icons/fa";
 
-export default function Home() {
+export default async function Home() {
+  const homepageContent = await getHomepageContent();
   return (
     <>
       <header className={styles.header}>
         <div className={styles.avatar}></div>
         <div className={styles.headerTextBox}>
-          <h1 className={styles.headingPrimary}>Abhinav Sorate</h1>
+          <h1 className={styles.headingPrimary}>{homepageContent[0].name}</h1>
           <h2 className={styles.headingSecondary}>
             <span></span> {/* for typing animation */}
           </h2>
           <p className={styles.headingTertiary}>
-            Hi, I&apos;m a web and app developer based in Bengaluru, India. I
-            create modern websites, web apps and mobile apps that are fast,
-            responsive & easy to use.
+            {homepageContent[0].shortIntroduction}
           </p>
         </div>
         <div className={styles.socialMedia}>
@@ -36,38 +36,13 @@ export default function Home() {
       <div className={styles.sectionContainer}>
         <section className={styles.textSection}>
           <h1 className={styles.title}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit
+            {homepageContent[0].introductionTitle}
           </h1>
-          <p className={styles.subTitle}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit,
-            delectus? Vero id atque rem est quis. Architecto adipisci id, iste
-            recusandae obcaecati porro doloremque? Accusantium at blanditiis
-            quis molestias doloribus.
-          </p>
-          <p className={styles.subTitle}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit,
-            delectus? Vero id atque rem est quis. Architecto adipisci id, iste
-            recusandae obcaecati porro doloremque? Accusantium at blanditiis
-            quis molestias doloribus.
-          </p>
-          <p className={styles.subTitle}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit,
-            delectus? Vero id atque rem est quis. Architecto adipisci id, iste
-            recusandae obcaecati porro doloremque? Accusantium at blanditiis
-            quis molestias doloribus.
-          </p>
-          <p className={styles.subTitle}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit,
-            delectus? Vero id atque rem est quis. Architecto adipisci id, iste
-            recusandae obcaecati porro doloremque? Accusantium at blanditiis
-            quis molestias doloribus.
-          </p>
-          <p className={styles.subTitle}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit,
-            delectus? Vero id atque rem est quis. Architecto adipisci id, iste
-            recusandae obcaecati porro doloremque? Accusantium at blanditiis
-            quis molestias doloribus.
-          </p>
+          {homepageContent[0].introduction.map((para: any) => (
+            <p key={para.children[0]._key} className={styles.subTitle}>
+              {para.children[0].text}
+            </p>
+          ))}
         </section>
         <section className={styles.imageSection}>
           <div className={styles.aboutImage}></div>

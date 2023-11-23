@@ -150,6 +150,7 @@
       font-weight: 400;
       margin-bottom: 2rem;
       line-height: 2.8rem;
+      color: $grey-color;
     }
   }
 
@@ -158,8 +159,8 @@
     flex-basis: 100%;
 
     .aboutImage {
-      height: 450px;
-      width: 350px;
+      height: 350px;
+      width: 300px;
       // border: 1px solid white;
       border-radius: 15px;
       margin-left: 50%;
