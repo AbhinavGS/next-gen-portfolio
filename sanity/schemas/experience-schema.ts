@@ -29,9 +29,9 @@ const experience = {
       type: "string",
       options: {
         list: [
-          { title: "On-site", value: "onSite" },
-          { title: "Hybrid", value: "hybrid" },
-          { title: "Remote", value: "remote" },
+          { title: "On-site", value: "On-site" },
+          { title: "Hybrid", value: "Hybrid" },
+          { title: "Remote", value: "Remote" },
         ],
       },
     },
@@ -41,9 +41,9 @@ const experience = {
       type: "string",
       options: {
         list: [
-          { title: "Full time", value: "fullTime" },
-          { title: "Part time", value: "partTime" },
-          { title: "Freelancing", value: "freelancing" },
+          { title: "Full time", value: "Full-time" },
+          { title: "Part time", value: "Part-time" },
+          { title: "Freelancing", value: "Freelancing" },
         ],
       },
     },
