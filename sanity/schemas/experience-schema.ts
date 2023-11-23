@@ -4,6 +4,11 @@ const experience = {
   type: "document",
   fields: [
     {
+      title: "Order",
+      name: "order",
+      type: "number",
+    },
+    {
       title: "Organization",
       name: "organization",
       type: "string",

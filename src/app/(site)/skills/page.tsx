@@ -4,6 +4,7 @@ import styles from "../../../styles/skills.module.scss";
 
 export default async function Page() {
   const skills = await getSkills();
+  skills.sort((a: any, b: any) => a.index - b.index);
   return (
     <>
       <section className={styles.textSection}>

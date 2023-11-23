@@ -4,6 +4,11 @@ const skill = {
   type: "document",
   fields: [
     {
+      title: "Order",
+      name: "order",
+      type: "number",
+    },
+    {
       title: "Name",
       name: "name",
       type: "string",
