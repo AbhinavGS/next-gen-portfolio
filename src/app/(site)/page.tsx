@@ -1,10 +1,16 @@
-import { getHomepageContent, getProjects } from "../../../sanity/sanity-utils";
+import {
+  getExperiences,
+  getHomepageContent,
+  getProjects,
+} from "../../../sanity/sanity-utils";
 import styles from "../../styles/home.module.scss";
 
 import { FaLinkedin, FaGithub, FaTwitter, FaInstagram } from "react-icons/fa";
+import ExperienceCard from "../ui/experienceCard";
 
 export default async function Home() {
   const homepageContent = await getHomepageContent();
+  const experiences = await getExperiences();
   return (
     <>
       <header className={styles.header}>
@@ -75,6 +81,12 @@ export default async function Home() {
             </ul>
           </div>
         </section>
+      </div>
+      <div className={styles.experiencesContainer}>
+        {/* <h1 className={styles.title}>{homepageContent[0].introductionTitle}</h1> */}
+        {experiences.map((experience: any) => (
+          <ExperienceCard key={experience._key} data={experience} />
+        ))}
       </div>
     </>
   );
