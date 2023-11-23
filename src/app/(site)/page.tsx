@@ -85,7 +85,7 @@ export default async function Home() {
       <div className={styles.experiencesContainer}>
         {/* <h1 className={styles.title}>{homepageContent[0].introductionTitle}</h1> */}
         {experiences.map((experience: any) => (
-          <ExperienceCard key={experience._key} data={experience} />
+          <ExperienceCard key={experience._id} data={experience} />
         ))}
       </div>
     </>
