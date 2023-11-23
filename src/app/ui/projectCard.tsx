@@ -12,10 +12,15 @@ export default function ProjectCard({ data }) {
         style={{ width: "100%", height: "auto" }}
         alt=""
       ></Image>
-      <h3>{data.title}</h3>
-      <p>{data.description}</p>
-      {/* <div>{data.repositoryLink}</div>
+      <div className={styles.cardInfo}>
+        <p className={styles.title}>{data.title}</p>
+        <p className={styles.description}>
+          A Next.js app and a Serverless Function API.
+        </p>
+        {/* <p className={styles.description}>{data.description}</p> */}
+        {/* <div>{data.repositoryLink}</div>
       <div>{data.link}</div> */}
+      </div>
     </div>
   );
 }
