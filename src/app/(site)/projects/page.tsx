@@ -4,7 +4,7 @@ import styles from "../../../styles/projects.module.scss";
 
 export default async function Page() {
   const projects = await getProjects();
-  projects.sort((a: any, b: any) => a.index - b.index);
+  projects.sort((a: any, b: any) => a.order - b.order);
   return (
     <>
       <section className={styles.textSection}>
