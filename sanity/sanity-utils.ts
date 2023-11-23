@@ -46,3 +46,15 @@ export async function getSkills() {
     }`
   );
 }
+
+export async function getHomepageContent() {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == "homepageContent"]{
+      _id,
+      name,
+      shortIntroduction,
+      introductionTitle,
+      introduction
+    }`
+  );
+}

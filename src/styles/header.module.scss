@@ -24,6 +24,10 @@
       padding-left: 1.25rem;
     }
 
+    :first-child {
+      display: flex;
+    }
+
     li {
       :hover {
         cursor: pointer;
@@ -32,8 +36,12 @@
     }
 
     a {
-      // "a" tag is <Link> in markup
-      all: unset;
+      all: unset; // "a" tag is <Link> in markup
+      .icon {
+        margin-right: 1rem;
+        display: inline-flex;
+        align-items: center;
+      }
     }
   }
 }
