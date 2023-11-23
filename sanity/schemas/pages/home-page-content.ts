@@ -24,6 +24,11 @@ const homePageContent = {
       type: "array",
       of: [{ type: "block" }],
     },
+    {
+      title: "Experiences title",
+      name: "experiencesTitle",
+      type: "string",
+    },
   ],
 };
 

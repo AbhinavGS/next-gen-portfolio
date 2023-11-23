@@ -3,6 +3,7 @@ import Image from "next/image";
 import { TbWorldWww } from "react-icons/tb";
 import { FaLinkedin } from "react-icons/fa";
 import { dateFormatter } from "@/utils/utils";
+import Link from "next/link";
 
 export default function ExperienceCard({ data }) {
   return (
@@ -12,8 +13,12 @@ export default function ExperienceCard({ data }) {
           <Image src={data.companyLogo} width={50} height={50} alt="" />
         </div>
         <div className={styles.icons}>
-          <TbWorldWww />
-          <FaLinkedin />
+          <Link href={data.website} target="_blank">
+            <TbWorldWww />
+          </Link>
+          <Link href={data.linkedin} target="_blank">
+            <FaLinkedin />
+          </Link>
         </div>
       </div>
       <section className={styles.companyInfo}>

@@ -54,7 +54,8 @@ export async function getHomepageContent() {
       name,
       shortIntroduction,
       introductionTitle,
-      introduction
+      introduction,
+      experiencesTitle
     }`
   );
 }

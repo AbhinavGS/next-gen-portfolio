@@ -33,6 +33,15 @@
       display: flex;
       gap: 10px;
       justify-content: center;
+
+      a {
+        all: unset; //Link from "next/link"
+      }
+
+      :hover {
+        cursor: pointer;
+        color: $white-color;
+      }
     }
   }
 

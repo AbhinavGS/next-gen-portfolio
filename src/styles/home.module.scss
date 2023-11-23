@@ -72,140 +72,150 @@
       }
     }
   }
-}
 
-@keyframes cursor {
-  to {
-    border-left: 2px solid #ff7f5000;
-  }
-}
-
-@keyframes words {
-  0%,
-  20% {
-    content: "Software developer";
-  }
-  21%,
-  40% {
-    content: "Web developer";
-  }
-  41%,
-  60% {
-    content: "App developer";
-  }
-  61%,
-  80% {
-    content: "React developer";
-  }
-  81%,
-  100% {
-    content: "Flutter developer";
-  }
-}
-
-@keyframes typing {
-  10%,
-  15%,
-  30%,
-  35%,
-  50%,
-  55%,
-  70%,
-  75%,
-  90%,
-  95% {
-    width: 0;
-  }
-  5%,
-  20%,
-  25%,
-  40%,
-  45%,
-  60%,
-  65%,
-  80%,
-  85% {
-    width: calc(100% + 8px);
-  }
-}
-
-.sectionContainer {
-  display: flex;
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-top: 10%;
-
-  .textSection {
-    // border: 1px solid blue;
-    flex-basis: 100%;
-
-    .title {
-      font-size: 4.8rem;
-      font-weight: 700;
-      margin-bottom: 2rem;
-    }
-
-    .subTitle {
-      font-size: 1.6rem;
-      font-weight: 400;
-      margin-bottom: 2rem;
-      line-height: 2.8rem;
-      color: $grey-color;
+  @keyframes cursor {
+    to {
+      border-left: 2px solid #ff7f5000;
     }
   }
 
-  .imageSection {
-    // border: 1px solid blue;
-    flex-basis: 100%;
+  @keyframes words {
+    0%,
+    20% {
+      content: "Software developer";
+    }
+    21%,
+    40% {
+      content: "Web developer";
+    }
+    41%,
+    60% {
+      content: "App developer";
+    }
+    61%,
+    80% {
+      content: "React developer";
+    }
+    81%,
+    100% {
+      content: "Flutter developer";
+    }
+  }
 
-    .aboutImage {
-      height: 350px;
-      width: 300px;
-      // border: 1px solid white;
-      border-radius: 15px;
-      margin-left: 50%;
-      margin-top: 2rem;
-      transform: translate(-50%) rotate(3deg);
-      background-image: url("https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?q=80&w=2866&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-      background-size: cover;
-      background-position: center;
+  @keyframes typing {
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    55%,
+    70%,
+    75%,
+    90%,
+    95% {
+      width: 0;
+    }
+    5%,
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    65%,
+    80%,
+    85% {
+      width: calc(100% + 8px);
+    }
+  }
+}
+
+.introductionSection {
+  .sectionContainer {
+    display: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10%;
+
+    .textSection {
+      // border: 1px solid blue;
+      flex-basis: 100%;
+
+      .title {
+        font-size: 4.8rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+      }
+
+      .subTitle {
+        font-size: 1.6rem;
+        font-weight: 400;
+        margin-bottom: 2rem;
+        line-height: 2.8rem;
+        color: $grey-color;
+      }
     }
 
-    .contactContainer {
-      margin-top: 5rem;
+    .imageSection {
+      // border: 1px solid blue;
+      flex-basis: 100%;
 
-      ul {
-        display: inline-block;
+      .aboutImage {
+        height: 350px;
+        width: 300px;
+        // border: 1px solid white;
+        border-radius: 15px;
         margin-left: 50%;
-        transform: translate(-50%);
+        margin-top: 2rem;
+        transform: translate(-50%) rotate(3deg);
+        background-image: url("https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?q=80&w=2866&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+        background-size: cover;
+        background-position: center;
+      }
 
-        li {
-          cursor: pointer;
-          list-style: none;
-          margin-bottom: 2rem;
-          font-size: 1.6rem;
-          display: flex;
-          color: $grey-color;
+      .contactContainer {
+        margin-top: 5rem;
 
-          span {
-            margin-right: 1rem;
-            display: inline-flex;
-            align-items: center;
+        ul {
+          display: inline-block;
+          margin-left: 50%;
+          transform: translate(-50%);
+
+          li {
+            cursor: pointer;
+            list-style: none;
+            margin-bottom: 2rem;
+            font-size: 1.6rem;
+            display: flex;
+            color: $grey-color;
+
+            span {
+              margin-right: 1rem;
+              display: inline-flex;
+              align-items: center;
+            }
           }
-        }
-        :hover {
-          color: $accent-color;
+          :hover {
+            color: $accent-color;
+          }
         }
       }
     }
   }
 }
 
-.experiencesContainer {
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-top: 10%;
-  border: 1px solid $border-color;
-  border-radius: 10px;
-  background-color: rgba($color: $border-color, $alpha: 0.3);
+.experiencesSection {
+  .title {
+    margin-top: 10%;
+    margin-left: 10%;
+    font-size: 4.8rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
+  .experiencesContainer {
+    margin-left: 10%;
+    margin-right: 10%;
+    border: 1px solid $border-color;
+    border-radius: 10px;
+    background-color: rgba($color: $border-color, $alpha: 0.3);
+  }
 }
