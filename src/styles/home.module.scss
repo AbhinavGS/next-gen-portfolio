@@ -165,11 +165,23 @@
 }
 
 .introductionSection {
+  margin: 12rem 10%;
+  // border: 1px solid red;
+
+  @include breakpoint("max-width", $tablet) {
+    margin: 12rem 10%;
+  }
+
+  @include breakpoint("max-width", $mobile) {
+    margin: 5rem 5%;
+  }
+
   .sectionContainer {
     display: flex;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 10%;
+
+    @include breakpoint("max-width", $small-laptop) {
+      flex-direction: column;
+    }
 
     .textSection {
       // border: 1px solid blue;
@@ -179,6 +191,14 @@
         font-size: 4.8rem;
         font-weight: 700;
         margin-bottom: 2rem;
+
+        @include breakpoint("max-width", $tablet) {
+          font-size: 3.6rem;
+        }
+
+        @include breakpoint("max-width", $mobile) {
+          font-size: 2.4rem;
+        }
       }
 
       .subTitle {
@@ -239,16 +259,28 @@
 }
 
 .experiencesSection {
+  margin: 12rem 10%;
+  // border: 1px solid red;
+
+  @include breakpoint("max-width", $tablet) {
+    margin: 12rem 10%;
+  }
+  @include breakpoint("max-width", $mobile) {
+    margin: 4rem 5%;
+  }
   .title {
-    margin-top: 10%;
-    margin-left: 10%;
     font-size: 4.8rem;
     font-weight: 700;
     margin-bottom: 2rem;
+
+    @include breakpoint("max-width", $tablet) {
+      font-size: 3.6rem;
+    }
+    @include breakpoint("max-width", $mobile) {
+      font-size: 2.4rem;
+    }
   }
   .experiencesContainer {
-    margin-left: 10%;
-    margin-right: 10%;
     border: 1px solid $border-color;
     border-radius: 10px;
     background-color: rgba($color: $border-color, $alpha: 0.3);
