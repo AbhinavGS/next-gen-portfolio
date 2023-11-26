@@ -2,10 +2,8 @@
 @import "./mixins";
 
 .header {
-  margin-left: 10%;
-  margin-top: 10%;
+  margin: 12rem 10%;
   // border: 1px solid red;
-  // width: 60%;
 
   @include breakpoint("max-width", $tablet) {
     margin: 12rem 10%;
@@ -79,6 +77,10 @@
       line-height: 1.6;
       color: $grey-color;
       font-weight: 400;
+
+      @include breakpoint("min-width", $tablet) {
+        margin-right: 25%;
+      }
 
       @include breakpoint("max-width", $mobile) {
         font-size: 1.6rem;
