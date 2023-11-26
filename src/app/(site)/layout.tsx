@@ -1,6 +1,6 @@
 import "../../styles/global.scss";
 import { inter, geistSans } from "@/app/ui/fonts";
-import Header from "../ui/header";
+import Navbar from "../ui/navbar";
 
 export default function RootLayout({
   children,
@@ -10,7 +10,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.className} antialiased`}>
-        <Header />
+        <Navbar />
         {children}
       </body>
     </html>

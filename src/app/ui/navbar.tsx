@@ -1,12 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import styles from "@/styles/header.module.scss";
+import styles from "@/styles/navbar.module.scss";
 import { FaHome, FaAngleDown } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 import { useState } from "react";
 
-export default function Header() {
+export default function Navbar() {
   const [toggle, setToggle] = useState(false);
 
   function showMenu(): void {

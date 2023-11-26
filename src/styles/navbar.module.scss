@@ -55,6 +55,7 @@
   @include breakpoint("min-width", $tablet) {
     display: none;
   }
+
   .dropdownButton {
     display: inline-block;
     padding: 8px 16px;
@@ -62,6 +63,11 @@
     border-radius: 50px;
     position: absolute;
     right: 10%;
+
+    @include breakpoint("min-width", $mobile) {
+      margin-top: -10%;
+    }
+
     span svg {
       margin-left: 0.5rem;
       vertical-align: middle;
@@ -69,10 +75,12 @@
   }
 
   .dropdownOptions {
+    z-index: 99;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    width: 85%;
+    width: 90%;
     background-color: $dark-grey-color;
     padding: 2rem;
     border: 1px solid $border-color;
