@@ -1,0 +1,9 @@
+@mixin breakpoint($type, $value) {
+  @if $type == "max-width" or $type == "min-width" {
+    @media screen and (#{$type}: $value) {
+      @content;
+    }
+  } @else {
+    @error "Invalid breakpoint type. Please use 'max-width' or 'min-width'.";
+  }
+}

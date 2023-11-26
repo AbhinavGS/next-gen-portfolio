@@ -1,4 +1,5 @@
 @import "./variables";
+@import "./mixins";
 
 .navbar {
   border: 1px solid $border-color;
@@ -7,6 +8,10 @@
   padding: 1.5rem 3rem;
   margin-left: 50%;
   transform: translate(-50%);
+
+  @include breakpoint("max-width", $tablet) {
+    display: none;
+  }
 
   ul {
     display: flex;
@@ -41,6 +46,70 @@
         margin-right: 1rem;
         display: inline-flex;
         align-items: center;
+      }
+    }
+  }
+}
+
+.menubar {
+  @include breakpoint("min-width", $tablet) {
+    display: none;
+  }
+  .dropdownButton {
+    display: inline-block;
+    padding: 8px 16px;
+    border: 1px solid $border-color;
+    border-radius: 50px;
+    position: absolute;
+    right: 10%;
+    span svg {
+      margin-left: 0.5rem;
+      vertical-align: middle;
+    }
+  }
+
+  .dropdownOptions {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+    background-color: $dark-grey-color;
+    padding: 2rem;
+    border: 1px solid $border-color;
+    border-radius: 25px;
+
+    .dropdownHeader {
+      color: $grey-color;
+      font-size: 1.4rem;
+      display: flex;
+      justify-content: space-between;
+
+      button {
+        all: unset;
+        svg {
+          font-size: 2rem;
+          vertical-align: middle;
+        }
+      }
+    }
+
+    ul {
+      font-size: 1.6rem;
+      margin-top: 1.5rem;
+      // border: 1px solid red;
+      :not(:last-child) {
+        padding: 16px 0;
+        border-bottom: 1px solid $grey-color;
+        border-color: $border-color;
+      }
+      :last-child {
+        padding-top: 16px;
+      }
+      li {
+        list-style: none;
+        a {
+          all: unset;
+        }
       }
     }
   }
