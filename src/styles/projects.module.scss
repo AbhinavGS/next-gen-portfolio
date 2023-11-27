@@ -1,13 +1,33 @@
 @import "./variables";
+@import "./mixins";
 
 .textSection {
-  margin-left: 10%;
-  margin-top: 10%;
-  width: 60%;
+  // border: 1px solid red;
+  margin: 8rem 10%;
+  @include breakpoint("min-width", $tablet) {
+    margin-right: 25%;
+  }
+
+  @include breakpoint("max-width", $tablet) {
+    margin: 8rem 10%;
+  }
+
+  @include breakpoint("max-width", $mobile) {
+    margin: 4rem 5%;
+  }
+
   .title {
     font-size: 4.8rem;
     font-weight: 700;
     margin-bottom: 2rem;
+
+    @include breakpoint("max-width", $tablet) {
+      font-size: 3.6rem;
+    }
+
+    @include breakpoint("max-width", $mobile) {
+      font-size: 2.4rem;
+    }
   }
 
   .subTitle {
@@ -20,15 +40,29 @@
 }
 
 .cardsSection {
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-top: 5%;
+  margin: 8rem 10%;
+
+  @include breakpoint("max-width", $tablet) {
+    margin: 8rem 10%;
+  }
+
+  @include breakpoint("max-width", $mobile) {
+    margin: 4rem 5%;
+  }
 
   .gridContainer {
     // border: 1px solid red;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    // grid-auto-rows: minmax(350px, auto);
+
+    @include breakpoint("max-width", $small-laptop) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include breakpoint("max-width", $mobile) {
+      grid-template-columns: 1fr;
+    }
+
     column-gap: 2rem;
     row-gap: 2rem;
   }
