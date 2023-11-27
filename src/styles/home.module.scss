@@ -34,11 +34,9 @@
 
       @include breakpoint("max-width", $tablet) {
         font-size: 4.8rem;
-        margin-bottom: 1rem;
       }
       @include breakpoint("max-width", $mobile) {
         font-size: 3.6rem;
-        margin-bottom: 1rem;
       }
     }
 
