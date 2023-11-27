@@ -1,0 +1,130 @@
+@import "./variables";
+@import "./mixins";
+
+.navContainer {
+  padding: 4rem 0;
+  // border: 1px solid blue;
+  display: flex;
+  justify-content: center;
+
+  @include breakpoint("max-width", $tablet) {
+    justify-content: flex-end;
+    padding: 2rem 5%;
+  }
+}
+
+.navbar {
+  border: 1px solid $border-color;
+  border-radius: 50px;
+  display: inline-block;
+  padding: 1.5rem 3rem;
+
+  @include breakpoint("max-width", $tablet) {
+    display: none;
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    :not(:last-child) {
+      padding-right: 1.25rem;
+      border-right: 1px solid $border-color;
+    }
+
+    :not(:first-child) {
+      padding-left: 1.25rem;
+    }
+
+    :first-child {
+      display: flex;
+    }
+
+    li {
+      :hover {
+        cursor: pointer;
+        color: $accent-color;
+      }
+    }
+
+    a {
+      all: unset; // "a" tag is <Link> in markup
+      .icon {
+        margin-right: 1rem;
+        display: inline-flex;
+        align-items: center;
+      }
+    }
+  }
+}
+
+.menubar {
+  @include breakpoint("min-width", $tablet) {
+    display: none;
+  }
+
+  .dropdownButton {
+    cursor: pointer;
+    display: inline-block;
+    padding: 1.5rem 3rem;
+    border: 1px solid $border-color;
+    border-radius: 50px;
+
+    span svg {
+      margin-left: 0.5rem;
+      vertical-align: middle;
+    }
+  }
+
+  .dropdownOptions {
+    z-index: 99;
+    left: 0;
+    right: 0;
+    top: 2rem;
+    margin: 0 auto;
+    position: absolute;
+    width: 90%;
+    background-color: $dark-grey-color;
+    padding: 2rem;
+    border: 1px solid $border-color;
+    border-radius: 25px;
+
+    .dropdownHeader {
+      color: $grey-color;
+      font-size: 1.4rem;
+      display: flex;
+      justify-content: space-between;
+
+      button {
+        all: unset;
+        svg {
+          font-size: 2rem;
+          vertical-align: middle;
+        }
+      }
+    }
+
+    ul {
+      font-size: 1.6rem;
+      margin-top: 1.5rem;
+      // border: 1px solid red;
+      :not(:last-child) {
+        padding: 16px 0;
+        border-bottom: 1px solid $grey-color;
+        border-color: $border-color;
+      }
+      :last-child {
+        padding-top: 16px;
+      }
+      li {
+        list-style: none;
+        a {
+          all: unset;
+        }
+      }
+    }
+  }
+}

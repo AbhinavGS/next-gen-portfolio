@@ -1,36 +1,66 @@
 @import "./variables";
+@import "./mixins";
 
 .header {
-  margin-left: 10%;
-  margin-top: 10%;
+  margin: 8rem 10%;
   // border: 1px solid red;
-  width: 60%;
+
+  @include breakpoint("max-width", $tablet) {
+    margin: 8rem 10%;
+  }
+  @include breakpoint("max-width", $mobile) {
+    margin: 4rem 5%;
+  }
 
   .avatar {
-    height: 8rem;
-    width: 8rem;
-    background-image: url("https://tailwindcss.com/_next/static/media/constraint-based.90d79a51.png");
+    height: 12rem;
+    width: 12rem;
+    background-image: url("https://res.cloudinary.com/dr38d2hrz/image/upload/v1701018331/portfolio_pfsqge.jpg");
     background-position: center;
     background-size: cover;
     border-radius: 50%;
     margin-bottom: 3.5rem;
+
+    @include breakpoint("max-width", $tablet) {
+      height: 18rem;
+      width: 18rem;
+    }
   }
 
   .headerTextBox {
     .headingPrimary {
       font-size: 6.4rem;
       margin-bottom: 1rem;
+
+      @include breakpoint("max-width", $tablet) {
+        font-size: 4.8rem;
+      }
+      @include breakpoint("max-width", $mobile) {
+        font-size: 3.6rem;
+      }
     }
+
     .headingSecondary {
       font-size: 3.2rem;
       margin-bottom: 2rem;
+
+      @include breakpoint("max-width", $mobile) {
+        font-size: 2.4rem;
+      }
 
       span {
         position: relative;
 
         &::before {
           content: "Software developer";
-          color: $accent-color;
+          background: linear-gradient(
+            105.23deg,
+            #01a4ff 33.35%,
+            #01ffc2 115.77%
+          );
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
           animation: words 20s infinite;
         }
 
@@ -46,11 +76,21 @@
         }
       }
     }
+
     .headingTertiary {
       font-size: 2rem;
       line-height: 1.6;
       color: $grey-color;
       font-weight: 400;
+
+      @include breakpoint("min-width", $tablet) {
+        margin-right: 25%;
+      }
+
+      @include breakpoint("max-width", $mobile) {
+        font-size: 1.6rem;
+        line-height: 1.6;
+      }
     }
   }
 
@@ -130,11 +170,23 @@
 }
 
 .introductionSection {
+  margin: 12rem 10%;
+  // border: 1px solid red;
+
+  @include breakpoint("max-width", $tablet) {
+    margin: 12rem 10%;
+  }
+
+  @include breakpoint("max-width", $mobile) {
+    margin: 5rem 5%;
+  }
+
   .sectionContainer {
     display: flex;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 10%;
+
+    @include breakpoint("max-width", $small-laptop) {
+      flex-direction: column;
+    }
 
     .textSection {
       // border: 1px solid blue;
@@ -144,6 +196,14 @@
         font-size: 4.8rem;
         font-weight: 700;
         margin-bottom: 2rem;
+
+        @include breakpoint("max-width", $tablet) {
+          font-size: 3.6rem;
+        }
+
+        @include breakpoint("max-width", $mobile) {
+          font-size: 2.4rem;
+        }
       }
 
       .subTitle {
@@ -204,16 +264,28 @@
 }
 
 .experiencesSection {
+  margin: 12rem 10%;
+  // border: 1px solid red;
+
+  @include breakpoint("max-width", $tablet) {
+    margin: 12rem 10%;
+  }
+  @include breakpoint("max-width", $mobile) {
+    margin: 4rem 5%;
+  }
   .title {
-    margin-top: 10%;
-    margin-left: 10%;
     font-size: 4.8rem;
     font-weight: 700;
     margin-bottom: 2rem;
+
+    @include breakpoint("max-width", $tablet) {
+      font-size: 3.6rem;
+    }
+    @include breakpoint("max-width", $mobile) {
+      font-size: 2.4rem;
+    }
   }
   .experiencesContainer {
-    margin-left: 10%;
-    margin-right: 10%;
     border: 1px solid $border-color;
     border-radius: 10px;
     background-color: rgba($color: $border-color, $alpha: 0.3);

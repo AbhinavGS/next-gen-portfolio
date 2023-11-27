@@ -1,12 +1,12 @@
 @import "./variables";
 
 .comingSoon {
-  justify-content: center;
+  padding: 0 2rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
   text-align: center;
-  margin-left: 50%;
-  margin-top: 20%;
-  transform: translate(-50%);
-  display: inline-block;
 
   h1 {
     color: $grey-color;
