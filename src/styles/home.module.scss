@@ -2,11 +2,11 @@
 @import "./mixins";
 
 .header {
-  margin: 12rem 10%;
+  margin: 8rem 10%;
   // border: 1px solid red;
 
   @include breakpoint("max-width", $tablet) {
-    margin: 12rem 10%;
+    margin: 8rem 10%;
   }
   @include breakpoint("max-width", $mobile) {
     margin: 4rem 5%;

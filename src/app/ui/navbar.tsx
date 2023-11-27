@@ -14,7 +14,7 @@ export default function Navbar() {
   }
 
   return (
-    <>
+    <div className={styles.navContainer}>
       <nav className={styles.navbar}>
         <ul>
           <li>
@@ -74,6 +74,6 @@ export default function Navbar() {
           </div>
         )}
       </div>
-    </>
+    </div>
   );
 }
