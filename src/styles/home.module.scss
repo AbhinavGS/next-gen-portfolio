@@ -53,7 +53,14 @@
 
         &::before {
           content: "Software developer";
-          color: $accent-color;
+          background: linear-gradient(
+            105.23deg,
+            #01a4ff 33.35%,
+            #01ffc2 115.77%
+          );
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
           animation: words 20s infinite;
         }
 
