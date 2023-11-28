@@ -7,7 +7,10 @@ import { usePathname } from "next/navigation";
 export default function Footer() {
   const pathname = usePathname();
   return (
-    <div className={styles.container}>
+    <div
+      style={pathname == "/articles" ? { display: "none" } : {}}
+      className={styles.container}
+    >
       <div className={styles.links}>
         {pathname != "/" && <Link href="/">Home</Link>}
         {pathname != "/projects" && <Link href="/projects">Projects</Link>}
