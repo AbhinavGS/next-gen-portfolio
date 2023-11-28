@@ -9,7 +9,7 @@
   }
 
   @include breakpoint("max-width", $mobile) {
-    padding: 0 5%;
+    padding: 4rem 5%;
   }
 
   .textSection {
