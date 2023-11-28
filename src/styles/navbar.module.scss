@@ -51,6 +51,10 @@
       }
     }
 
+    .activeLink {
+      color: $accent-color;
+    }
+
     a {
       all: unset; // "a" tag is <Link> in markup
       padding: 1rem; // to increase clickable area

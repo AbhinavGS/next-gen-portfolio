@@ -5,32 +5,34 @@ import styles from "@/styles/navbar.module.scss";
 import { FaHome, FaAngleDown } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [toggle, setToggle] = useState(false);
+  const pathname = usePathname();
 
   return (
     <div className={styles.navContainer}>
       <nav className={styles.navbar}>
         <ul>
-          <li>
+          <li className={pathname == "/" ? styles.activeLink : ""}>
             <Link href="/">
               <span>
-                <FaHome className={styles.icon} />
+                <FaHome className={`${styles.icon} ${styles.icon2}`} />
               </span>
               Home
             </Link>
           </li>
-          <li>
+          <li className={pathname == "/projects" ? styles.activeLink : ""}>
             <Link href="/projects">Projects</Link>
           </li>
-          <li>
+          <li className={pathname == "/skills" ? styles.activeLink : ""}>
             <Link href="/skills">Skills</Link>
           </li>
-          <li>
+          <li className={pathname == "/articles" ? styles.activeLink : ""}>
             <Link href="/articles">Articles</Link>
           </li>
-          <li>
+          <li className={pathname == "/contact" ? styles.activeLink : ""}>
             <Link href="/contact">Contact</Link>
           </li>
         </ul>
