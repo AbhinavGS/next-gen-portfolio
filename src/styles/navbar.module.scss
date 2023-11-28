@@ -18,6 +18,7 @@
   border-radius: 50px;
   display: inline-block;
   padding: 1.5rem 3rem;
+  background-color: rgba($color: $border-color, $alpha: 0.5);
 
   @include breakpoint("max-width", $tablet) {
     display: none;
@@ -52,6 +53,8 @@
 
     a {
       all: unset; // "a" tag is <Link> in markup
+      padding: 1rem; // to increase clickable area
+      margin: -1rem; // to increase clickable area
       .icon {
         margin-right: 1rem;
         display: inline-flex;
@@ -72,6 +75,7 @@
     padding: 1.5rem 3rem;
     border: 1px solid $border-color;
     border-radius: 50px;
+    background-color: rgba($color: $border-color, $alpha: 0.5);
 
     span svg {
       margin-left: 0.5rem;
@@ -93,6 +97,7 @@
     border-radius: 25px;
 
     .dropdownHeader {
+      margin-left: 1.5rem;
       color: $grey-color;
       font-size: 1.4rem;
       display: flex;
@@ -109,20 +114,21 @@
 
     ul {
       font-size: 1.6rem;
-      margin-top: 1.5rem;
-      // border: 1px solid red;
-      :not(:last-child) {
-        padding: 16px 0;
-        border-bottom: 1px solid $grey-color;
-        border-color: $border-color;
-      }
-      :last-child {
-        padding-top: 16px;
-      }
+      margin: 1.5rem 1.5rem 0 1.5rem;
+
       li {
         list-style: none;
+
         a {
           all: unset;
+          display: block;
+          padding: 16px 0;
+          border-bottom: 1px solid $grey-color;
+          border-color: $border-color;
+        }
+
+        .lastLink {
+          border: none;
         }
       }
     }

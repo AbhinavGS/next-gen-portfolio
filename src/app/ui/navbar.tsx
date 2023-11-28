@@ -68,7 +68,7 @@ export default function Navbar() {
                 <Link href="/articles">Articles</Link>
               </li>
               <li>
-                <Link href="/contact">Contact</Link>
+                <Link className={styles.lastLink} href="/contact">Contact</Link>
               </li>
             </ul>
           </div>
