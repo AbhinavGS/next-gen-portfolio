@@ -9,10 +9,6 @@ import { useState } from "react";
 export default function Navbar() {
   const [toggle, setToggle] = useState(false);
 
-  function showMenu(): void {
-    setToggle((toggle) => !toggle);
-  }
-
   return (
     <div className={styles.navContainer}>
       <nav className={styles.navbar}>
@@ -40,7 +36,10 @@ export default function Navbar() {
         </ul>
       </nav>
       <div className={styles.menubar}>
-        <div onClick={() => showMenu()} className={styles.dropdownButton}>
+        <div
+          onClick={() => setToggle((prev) => !prev)}
+          className={styles.dropdownButton}
+        >
           <span>Menu</span>
           <span>
             <FaAngleDown />
@@ -56,19 +55,33 @@ export default function Navbar() {
             </div>
             <ul>
               <li>
-                <Link href="/">Home</Link>
+                <Link onClick={() => setToggle(false)} href="/">
+                  Home
+                </Link>
               </li>
               <li>
-                <Link href="/projects">Projects</Link>
+                <Link onClick={() => setToggle(false)} href="/projects">
+                  Projects
+                </Link>
               </li>
               <li>
-                <Link href="/skills">Skills</Link>
+                <Link onClick={() => setToggle(false)} href="/skills">
+                  Skills
+                </Link>
               </li>
               <li>
-                <Link href="/articles">Articles</Link>
+                <Link onClick={() => setToggle(false)} href="/articles">
+                  Articles
+                </Link>
               </li>
               <li>
-                <Link className={styles.lastLink} href="/contact">Contact</Link>
+                <Link
+                  className={styles.lastLink}
+                  onClick={() => setToggle(false)}
+                  href="/contact"
+                >
+                  Contact
+                </Link>
               </li>
             </ul>
           </div>
