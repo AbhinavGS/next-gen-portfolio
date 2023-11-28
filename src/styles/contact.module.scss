@@ -2,7 +2,6 @@
 @import "./mixins";
 
 .container {
-  // border: 1px solid red;
   padding: 8rem 10%;
 
   @include breakpoint("max-width", $tablet) {
@@ -30,7 +29,6 @@
   }
 
   .contactSection {
-    // border: 1px solid green;
     display: flex;
 
     @include breakpoint("max-width", $tablet) {
@@ -94,7 +92,7 @@
           justify-content: center;
           align-items: center;
           padding: 1rem 2rem;
-          // border: 1px solid yellow;
+
           svg {
             vertical-align: middle;
           }
@@ -102,10 +100,14 @@
 
         .mailText {
           padding: 1rem 0;
-          // border: 1px solid red;
+
           :last-child {
             color: $white-color;
             margin-top: 5px;
+          }
+
+          a {
+            text-decoration: none;
           }
         }
       }
@@ -123,7 +125,7 @@
           justify-content: center;
           align-items: center;
           padding: 1rem 2rem;
-          // border: 1px solid yellow;
+
           svg {
             vertical-align: middle;
           }
@@ -132,11 +134,14 @@
         .phoneText {
           padding: 1rem 0;
           font-size: 1.6rem;
-          // border: 1px solid red;
 
           :last-child {
             color: $white-color;
             margin-top: 5px;
+          }
+
+          a {
+            text-decoration: none;
           }
         }
       }
