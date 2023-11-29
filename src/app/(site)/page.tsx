@@ -31,9 +31,12 @@ export default async function Home() {
           </p>
         </div>
         <div className={styles.social}>
-          <a href="#">
+          <a
+            href="https://docs.google.com/document/d/e/2PACX-1vQOc_kFIHh9dXH3bJ_obIL6HbxttcV0LTYsIPCrYPRMyCmpE8D4yhtxtVe5ZX7t8V8v14CbuYLXtC6C/pub"
+            target="_blank"
+          >
             <div className={styles.cv}>
-              <span>Download CV</span> <FaDownload />
+              <span>View CV</span> <FaDownload />
             </div>
           </a>
           <a href="https://www.linkedin.com/in/abhinav-sorate-42a959140/">
