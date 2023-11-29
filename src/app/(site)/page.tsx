@@ -5,7 +5,13 @@ import {
 } from "../../../sanity/sanity-utils";
 import styles from "../../styles/home.module.scss";
 
-import { FaLinkedin, FaGithub, FaTwitter, FaInstagram } from "react-icons/fa";
+import {
+  FaLinkedin,
+  FaGithub,
+  FaTwitter,
+  FaInstagram,
+  FaDownload,
+} from "react-icons/fa";
 import ExperienceCard from "../ui/experienceCard";
 
 export default async function Home() {
@@ -24,18 +30,21 @@ export default async function Home() {
             {homepageContent[0].shortIntroduction}
           </p>
         </div>
-        <div className={styles.socialMedia}>
-          <a href="https://linkedin.com">
-            <FaLinkedin />
+        <div className={styles.social}>
+          <a href="#">
+            <div className={styles.cv}>
+              <span>Download CV</span> <FaDownload />
+            </div>
           </a>
-          <a href="https://github.com/">
-            <FaGithub />
+          <a href="https://www.linkedin.com/in/abhinav-sorate-42a959140/">
+            <div className={styles.icons}>
+              <FaLinkedin size={25} />
+            </div>
           </a>
-          <a href="https://twitter.com/">
-            <FaTwitter />
-          </a>
-          <a href="https://instagram.com/">
-            <FaInstagram />
+          <a href="https://github.com/AbhinavGS">
+            <div className={styles.icons}>
+              <FaGithub size={25} />
+            </div>
           </a>
         </div>
       </header>
