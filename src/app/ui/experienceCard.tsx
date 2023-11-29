@@ -5,7 +5,7 @@ import { FaLinkedin } from "react-icons/fa";
 import { dateFormatter } from "@/utils/utils";
 import Link from "next/link";
 
-export default function ExperienceCard({ data }) {
+export default function ExperienceCard({ data }: any) {
   return (
     <div className={styles.card}>
       <div className={styles.logoSection}>

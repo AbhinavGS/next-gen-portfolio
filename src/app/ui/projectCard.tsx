@@ -1,7 +1,7 @@
 import styles from "../../styles/projects.module.scss";
 import Image from "next/image";
 
-export default function ProjectCard({ data }) {
+export default function ProjectCard({ data }:any) {
   return (
     <div className={styles.card}>
       <Image
