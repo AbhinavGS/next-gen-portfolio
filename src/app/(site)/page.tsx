@@ -18,7 +18,7 @@ export default async function Home() {
   const homepageContent = await getHomepageContent();
   const experiences = await getExperiences();
   return (
-    <>
+    <div className="wrapper">
       <header className={styles.header}>
         <div className={styles.avatar}></div>
         <div className={styles.headerTextBox}>
@@ -104,6 +104,6 @@ export default async function Home() {
           ))}
         </div>
       </section>
-    </>
+    </div>
   );
 }

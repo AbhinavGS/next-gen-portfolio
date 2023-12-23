@@ -1,5 +1,5 @@
 import "../../styles/global.scss";
-import { inter, geistSans } from "@/app/ui/fonts";
+import { geistSans } from "@/app/ui/fonts";
 import Navbar from "../ui/navbar";
 import Footer from "../ui/footer";
 

@@ -6,7 +6,7 @@ export default async function Page() {
   const projects = await getProjects();
   projects.sort((a: any, b: any) => a.order - b.order);
   return (
-    <>
+    <div className="wrapper">
       <section className={styles.textSection}>
         <h1 className={styles.title}>
           Exploring My Universe: Showcase of Creative Endeavors
@@ -27,6 +27,6 @@ export default async function Page() {
           ))}
         </div>
       </section>
-    </>
+    </div>
   );
 }
