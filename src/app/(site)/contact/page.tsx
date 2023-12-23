@@ -1,9 +1,31 @@
+"use client";
+
 import styles from "../../../styles/contact.module.scss";
 import { FiMail } from "react-icons/fi";
 import { BsPhone } from "react-icons/bs";
 import Link from "next/link";
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 export default function Page() {
+  const form = useRef(null);
+
+  const sendEmail = async (e: any) => {
+    e.preventDefault();
+
+    try {
+      const result = await emailjs.sendForm(
+        process.env.NEXT_PUBLIC_SANITY_MAILJS_SERVICE_ID ?? "",
+        process.env.NEXT_PUBLIC_SANITY_MAILJS_TEMPLATE_ID ?? "",
+        form.current ?? "",
+        process.env.NEXT_PUBLIC_SANITY_MAILJS_PUBLIC_KEY
+      );
+      console.log(result.text);
+    } catch (error: any) {
+      console.error(error.text);
+    }
+  };
+
   return (
     <div className="wrapper">
       <div className={styles.container}>
@@ -11,7 +33,7 @@ export default function Page() {
           <h1 className={styles.title}>Let&apos;s start a conversation</h1>
         </section>
         <div className={styles.contactSection}>
-          <section className={styles.contactForm}>
+          <form ref={form} className={styles.contactForm}>
             <input type="text" placeholder="Enter your name" name="name" />
             <input type="text" placeholder="Enter your email" name="email" />
             <textarea
@@ -20,8 +42,8 @@ export default function Page() {
               cols={30}
               rows={10}
             ></textarea>
-            <button>Send message</button>
-          </section>
+            <button onClick={(e) => sendEmail(e)}>Send message</button>
+          </form>
           <section className={styles.contactInfo}>
             <div className={styles.mail}>
               <div className={styles.mailIcon}>
