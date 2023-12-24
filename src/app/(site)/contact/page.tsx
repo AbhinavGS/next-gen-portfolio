@@ -4,8 +4,11 @@ import styles from "../../../styles/contact.module.scss";
 import { FiMail } from "react-icons/fi";
 import { BsPhone } from "react-icons/bs";
 import Link from "next/link";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect, useMemo } from "react";
 import emailjs from "@emailjs/browser";
+
+import Particles, { initParticlesEngine } from "@tsparticles/react";
+import { loadSlim } from "@tsparticles/slim";
 
 export default function Page() {
   const form = useRef<HTMLFormElement>(null);
@@ -14,6 +17,60 @@ export default function Page() {
   const messageInput = useRef<HTMLTextAreaElement>(null);
 
   const [loading, setLoading] = useState(false);
+  const [init, setInit] = useState(false);
+
+  useEffect(() => {
+    initParticlesEngine(async (engine) => {
+      await loadSlim(engine);
+    }).then(() => {
+      setInit(true);
+    });
+  }, []);
+
+  const options = useMemo(
+    () => ({
+      fpsLimit: 120,
+      particles: {
+        color: {
+          value: "#ffffff",
+        },
+        links: {
+          color: "#ffffff",
+          distance: 150,
+          enable: true,
+          opacity: 0.25,
+          width: 1,
+        },
+        move: {
+          direction: "none",
+          enable: true,
+          outModes: {
+            default: "bounce",
+          },
+          random: false,
+          speed: 1,
+          straight: false,
+        },
+        number: {
+          density: {
+            enable: false,
+          },
+          value: 100,
+        },
+        opacity: {
+          value: 0.25,
+        },
+        shape: {
+          type: "rectangle",
+        },
+        size: {
+          value: { min: 1, max: 5 },
+        },
+      },
+      detectRetina: true,
+    }),
+    []
+  );
 
   const areAllFormFieldsFilled = () => {
     if (
@@ -63,6 +120,7 @@ export default function Page() {
 
   return (
     <div className="wrapper">
+      {init && <Particles id="tsparticles" options={options as any} />}
       <div className={styles.container}>
         <section className={styles.textSection}>
           <h1 className={styles.title}>Let&apos;s start a conversation</h1>
