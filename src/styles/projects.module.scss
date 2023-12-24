@@ -88,6 +88,30 @@
         line-height: 20px;
         color: $grey-color;
       }
+      .linkWrapper {
+        display: flex;
+        font-size: 1.4rem;
+        font-weight: 300;
+        line-height: 20px;
+        color: $grey-color;
+
+        .links {
+          cursor: pointer;
+          margin-bottom: 0.5rem;
+
+          :hover {
+            color: $white-color;
+          }
+          a {
+            all: unset;
+            margin-right: 2rem;
+
+            span {
+              margin-left: 0.5rem;
+            }
+          }
+        }
+      }
     }
   }
 }

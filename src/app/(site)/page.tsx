@@ -5,14 +5,17 @@ import {
 } from "../../../sanity/sanity-utils";
 import styles from "../../styles/home.module.scss";
 
-import { FaLinkedin, FaGithub, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaInstagram, FaDownload } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+
 import ExperienceCard from "../ui/experienceCard";
+import Link from "next/link";
 
 export default async function Home() {
   const homepageContent = await getHomepageContent();
   const experiences = await getExperiences();
   return (
-    <>
+    <div className="wrapper">
       <header className={styles.header}>
         <div className={styles.avatar}></div>
         <div className={styles.headerTextBox}>
@@ -24,19 +27,22 @@ export default async function Home() {
             {homepageContent[0].shortIntroduction}
           </p>
         </div>
-        <div className={styles.socialMedia}>
-          <a href="https://linkedin.com">
-            <FaLinkedin />
-          </a>
-          <a href="https://github.com/">
-            <FaGithub />
-          </a>
-          <a href="https://twitter.com/">
-            <FaTwitter />
-          </a>
-          <a href="https://instagram.com/">
-            <FaInstagram />
-          </a>
+        <div className={styles.social}>
+          <Link href="RESUME.pdf" target="_blank">
+            <div className={styles.cv}>
+              <span>Get Resume</span> <FaDownload />
+            </div>
+          </Link>
+          <Link href="https://www.linkedin.com/in/abhinav-sorate-42a959140/">
+            <div className={styles.icons}>
+              <FaLinkedin size={25} />
+            </div>
+          </Link>
+          <Link href="https://github.com/AbhinavGS">
+            <div className={styles.icons}>
+              <FaGithub size={25} />
+            </div>
+          </Link>
         </div>
       </header>
       <section className={styles.introductionSection}>
@@ -56,28 +62,42 @@ export default async function Home() {
             <div className={styles.contactContainer}>
               <ul>
                 <li>
-                  <span>
-                    <FaTwitter className={styles.icon} />
-                  </span>
-                  <span>Follow on Twitter</span>
+                  <Link target="_blank" href="https://www.x.com/abhinavsorate/">
+                    <span>
+                      <FaXTwitter className={styles.icon} />
+                    </span>
+                    <span>Follow on X (Formally Twitter)</span>
+                  </Link>
                 </li>
                 <li>
-                  <span>
-                    <FaInstagram className={styles.icon} />
-                  </span>
-                  <span>Follow on Instagram</span>
+                  <Link
+                    target="_blank"
+                    href="https://www.instagram.com/abhinavsorate/"
+                  >
+                    <span>
+                      <FaInstagram className={styles.icon} />
+                    </span>
+                    <span>Follow on Instagram</span>
+                  </Link>
                 </li>
                 <li>
-                  <span>
-                    <FaGithub className={styles.icon} />
-                  </span>
-                  <span>Follow on GitHub</span>
+                  <Link target="_blank" href="https://github.com/AbhinavGS">
+                    <span>
+                      <FaGithub className={styles.icon} />
+                    </span>
+                    <span>Follow on GitHub</span>
+                  </Link>
                 </li>
                 <li>
-                  <span>
-                    <FaLinkedin className={styles.icon} />
-                  </span>
-                  <span>Follow on LinkedIn</span>
+                  <Link
+                    target="_blank"
+                    href="https://www.linkedin.com/in/abhinav-sorate-42a959140/"
+                  >
+                    <span>
+                      <FaLinkedin className={styles.icon} />
+                    </span>
+                    <span>Follow on LinkedIn</span>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -92,6 +112,6 @@ export default async function Home() {
           ))}
         </div>
       </section>
-    </>
+    </div>
   );
 }

@@ -4,12 +4,23 @@ import Link from "next/link";
 import styles from "@/styles/navbar.module.scss";
 import { FaHome, FaAngleDown } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [toggle, setToggle] = useState(false);
   const pathname = usePathname();
+
+  useEffect(() => {
+    var homepageElement = document.querySelector(".wrapper");
+    var homepageHTMLElement = homepageElement as HTMLElement;
+
+    if (homepageElement && toggle) {
+      homepageHTMLElement.style.filter = "blur(5px)";
+    } else if (homepageElement) {
+      homepageHTMLElement.style.filter = "blur(0px)";
+    }
+  }, [toggle]);
 
   return (
     <div className={styles.navContainer}>
@@ -48,44 +59,34 @@ export default function Navbar() {
           </span>
         </div>
         {toggle && (
-          <div className={styles.dropdownOptions}>
-            <div className={styles.dropdownHeader}>
-              <span>Navigation</span>
-              <button onClick={() => setToggle(false)}>
-                <IoClose />
-              </button>
+          <div className={styles.modal} onClick={() => setToggle(false)}>
+            <div className={styles.dropdownOptions}>
+              <div className={styles.dropdownHeader}>
+                <span>Navigation</span>
+                <button>
+                  <IoClose />
+                </button>
+              </div>
+              <ul>
+                <li>
+                  <Link href="/">Home</Link>
+                </li>
+                <li>
+                  <Link href="/projects">Projects</Link>
+                </li>
+                <li>
+                  <Link href="/skills">Skills</Link>
+                </li>
+                <li>
+                  <Link href="/articles">Articles</Link>
+                </li>
+                <li>
+                  <Link className={styles.lastLink} href="/contact">
+                    Contact
+                  </Link>
+                </li>
+              </ul>
             </div>
-            <ul>
-              <li>
-                <Link onClick={() => setToggle(false)} href="/">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link onClick={() => setToggle(false)} href="/projects">
-                  Projects
-                </Link>
-              </li>
-              <li>
-                <Link onClick={() => setToggle(false)} href="/skills">
-                  Skills
-                </Link>
-              </li>
-              <li>
-                <Link onClick={() => setToggle(false)} href="/articles">
-                  Articles
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className={styles.lastLink}
-                  onClick={() => setToggle(false)}
-                  href="/contact"
-                >
-                  Contact
-                </Link>
-              </li>
-            </ul>
           </div>
         )}
       </div>

@@ -6,7 +6,7 @@ export default async function Page() {
   const skills = await getSkills();
   skills.sort((a: any, b: any) => a.order - b.order);
   return (
-    <>
+    <div className="wrapper">
       <section className={styles.textSection}>
         <h1 className={styles.title}>Skills I Achieved Over the Years</h1>
         <p className={styles.subTitle}>
@@ -24,6 +24,6 @@ export default async function Page() {
           <SkillCard key={skill._id} data={skill} />
         ))}
       </section>
-    </>
+    </div>
   );
 }

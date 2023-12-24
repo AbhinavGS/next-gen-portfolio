@@ -1,7 +1,7 @@
 import styles from "../../styles/skills.module.scss";
 import Image from "next/image";
 
-export default function SkillCard({ data }) {
+export default function SkillCard({ data }:any) {
   return (
     <div className={styles.card}>
       <div className={styles.cardImage}>
