@@ -5,14 +5,11 @@ import {
 } from "../../../sanity/sanity-utils";
 import styles from "../../styles/home.module.scss";
 
-import {
-  FaLinkedin,
-  FaGithub,
-  FaTwitter,
-  FaInstagram,
-  FaDownload,
-} from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaInstagram, FaDownload } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+
 import ExperienceCard from "../ui/experienceCard";
+import Link from "next/link";
 
 export default async function Home() {
   const homepageContent = await getHomepageContent();
@@ -31,21 +28,21 @@ export default async function Home() {
           </p>
         </div>
         <div className={styles.social}>
-          <a href="RESUME.pdf" target="_blank">
+          <Link href="RESUME.pdf" target="_blank">
             <div className={styles.cv}>
               <span>Get Resume</span> <FaDownload />
             </div>
-          </a>
-          <a href="https://www.linkedin.com/in/abhinav-sorate-42a959140/">
+          </Link>
+          <Link href="https://www.linkedin.com/in/abhinav-sorate-42a959140/">
             <div className={styles.icons}>
               <FaLinkedin size={25} />
             </div>
-          </a>
-          <a href="https://github.com/AbhinavGS">
+          </Link>
+          <Link href="https://github.com/AbhinavGS">
             <div className={styles.icons}>
               <FaGithub size={25} />
             </div>
-          </a>
+          </Link>
         </div>
       </header>
       <section className={styles.introductionSection}>
@@ -65,28 +62,42 @@ export default async function Home() {
             <div className={styles.contactContainer}>
               <ul>
                 <li>
-                  <span>
-                    <FaTwitter className={styles.icon} />
-                  </span>
-                  <span>Follow on Twitter</span>
+                  <Link target="_blank" href="https://www.x.com/abhinavsorate/">
+                    <span>
+                      <FaXTwitter className={styles.icon} />
+                    </span>
+                    <span>Follow on X (Formally Twitter)</span>
+                  </Link>
                 </li>
                 <li>
-                  <span>
-                    <FaInstagram className={styles.icon} />
-                  </span>
-                  <span>Follow on Instagram</span>
+                  <Link
+                    target="_blank"
+                    href="https://www.instagram.com/abhinavsorate/"
+                  >
+                    <span>
+                      <FaInstagram className={styles.icon} />
+                    </span>
+                    <span>Follow on Instagram</span>
+                  </Link>
                 </li>
                 <li>
-                  <span>
-                    <FaGithub className={styles.icon} />
-                  </span>
-                  <span>Follow on GitHub</span>
+                  <Link target="_blank" href="https://github.com/AbhinavGS">
+                    <span>
+                      <FaGithub className={styles.icon} />
+                    </span>
+                    <span>Follow on GitHub</span>
+                  </Link>
                 </li>
                 <li>
-                  <span>
-                    <FaLinkedin className={styles.icon} />
-                  </span>
-                  <span>Follow on LinkedIn</span>
+                  <Link
+                    target="_blank"
+                    href="https://www.linkedin.com/in/abhinav-sorate-42a959140/"
+                  >
+                    <span>
+                      <FaLinkedin className={styles.icon} />
+                    </span>
+                    <span>Follow on LinkedIn</span>
+                  </Link>
                 </li>
               </ul>
             </div>
