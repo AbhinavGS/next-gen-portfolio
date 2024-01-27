@@ -1,5 +1,6 @@
 import "../../styles/global.scss";
 import { geistSans } from "@/app/ui/fonts";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import Navbar from "../ui/navbar";
 import Footer from "../ui/footer";
 
@@ -21,6 +22,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        <SpeedInsights />
       </body>
     </html>
   );
